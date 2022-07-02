@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRENT | Privacy</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/logoOnly.png" />
+    <link rel="stylesheet" href="~/CSS/Privacy.css">
+</head>
+
+<body>
+
+  <nav class="nav pink">
+        <div class="container">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Home">
+                    <img src="~/Media/Logo_Home.png" alt="">
+                </a>
+            </div>
+            <span class="search-bar">
+                <input type="text" placeholder="Search For Partner" name="" id="">
+                <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+            </span>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button" id="nav-profile">
+                        <div>
+                            <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button">
+                        <div class="nav-dropdown">
+                            <img  src="~/Media/Drop.png" alt="">
+                        </div>
+                        <div class="dropped">
+                            <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                            <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                            <a asp-controller="Home" asp-action="Index">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+      <div class="sidebar">
+        <div class="sidebar-menu">
+          <ul>
+            <li>
+              <a asp-controller="Home" asp-action="Settings2">
+                <span>Settings</span>
+                <hr class="blabla">
+              </a>
+            </li>
+            <li>
+              <a class="#" href="#">
+                <span>Privacy Policy</span>
+                <hr class="utama">
+              </a>
+            </li>
+            <li>
+                <a asp-controller="Home" asp-action="Condition">
+                  <span class="utama" style="font-size: 26px;">Terms and Conditions of Use</span>
+                  <hr class="blabla">
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-2">
+          <div class="text">
+            <h2>Privacy Policy</h2>
+          </div>
+          <hr class="textt">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio voluptate corporis deleniti harum laboriosam iste, explicabo beatae cum voluptatibus magni, omnis inventore,
+            pariatur ad doloremque eum repudiandae vero et quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus alias libero laborum a totam ipsum sit voluptatibus, numquam officiis illum excepturi architecto nesciunt, 
+            omnis perferendis non sunt quis nemo nam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, ad dolore. Velit, tempora? Ad dicta soluta amet voluptas enim, est ipsam repellat! Iusto alias numquam 
+            eum consectetur libero ipsum deleniti!
+         </p>
+         <br>
+         <p style="margin-bottom: 101px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim rerum aperiam tempora, corrupti labore repellendus, minima nulla ad reprehenderit quam magni quae adipisci accusantium provident animi
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit porro cupiditate, perferendis iste, praesentium vel fugiat ullam iure, alias explicabo possimus eaque nemo molestias magni.
+            Saepe laboriosam voluptate sapiente voluptatibus., vitae dolore quia quaerat.</p>
+      </div>
+</body>
+<footer>
+  <div class="social-media-footer">
+      <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+      <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+      <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+  </div>
+  <div class="text-footer">
+      © 2022, PT. FRENT.
+  </div>
+</footer>
+<script src="~/JS/navbar.js"></script>
+</html>

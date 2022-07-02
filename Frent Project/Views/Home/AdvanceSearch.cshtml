@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="~/CSS/AdvanceSearch.css" type="text/css">
+    <title>FRENT</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  </head>
+<body>
+    <nav class="nav pink">
+        <div class="container">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Home">
+                    <img src="~/Media/Logo_Home.png" alt="">
+                </a>
+            </div>
+            <span class="search-bar">
+                <input type="text" placeholder="Search For Partner" name="" id="">
+                <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+            </span>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button" id="nav-profile">
+                        <div>
+                            <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button">
+                        <div class="nav-dropdown">
+                            <img  src="~/Media/Drop.png" alt="">
+                        </div>
+                        <div class="dropped">
+                            <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                            <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                            <a asp-controller="Home" asp-action="Index">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    <div class="box-container">
+        <div class="dark-glass">
+            <div class="chat-screen">
+                <div class="close-chat">
+                    <a asp-controller="Home" asp-action="Home"><img src="~/Media/times.png" alt=""></a>
+                </div>
+                <span class="search-bar" id="search-advance">
+                    <input type="text" placeholder="Search For Partner" name="" id="">
+                    <img src="~/Media/Icon_search.png" alt="">
+                </span>
+                <div class="input-container">
+                    <h3>Filter</h3>
+                    <div class="filter-check-container">
+                        <input type="checkbox" name="" id="travelling" class="filter-check">
+                        <label for="travelling">Travelling</label>
+                        <input type="checkbox" name="" id="dating" class="filter-check">
+                        <label for="dating">Dating Partner</label>
+                        <input type="checkbox" name="" id="female" class="filter-check">
+                        <label for="female">Female</label>
+                        <input type="checkbox" name="" id="male" class="filter-check">
+                        <label for="male">Male</label>
+                        <input type="checkbox" name="" id="online" class="filter-check">
+                        <label for="online">Online</label>
+                        <input type="checkbox" name="" id="offline" class="filter-check">
+                        <label for="offline">Offline</label>
+                        <input type="checkbox" name="" id="game" class="filter-check">
+                        <label for="game">Game</label>
+                    </div>
+                    <div class="constraint-container">
+                        <input type="number" class="constraint-input" placeholder="Minimum age">
+                        <input type="number" class="constraint-input" placeholder="Maximum age">
+                        <input type="number" class="constraint-input" placeholder="Minimum cost">
+                        <input type="number" class="constraint-input" placeholder="Maximum cost">
+                        <input type="text" class="constraint-input" placeholder="Input location">
+                    </div>
+                    <h3>Sort</h3>
+                    <div class="sort-container">
+                        <input type="radio" name="sort" id="cost" class="sort-input">
+                        <label for="cost">Cost</label>
+                        <input type="radio" name="sort" id="age" class="sort-input">
+                        <label for="age">Age</label>
+                        <input type="radio" name="sort" id="name" class="sort-input">
+                        <label for="name">Name</label>
+                        <input type="radio" name="sort" id="rate" class="sort-input">
+                        <label for="rate">rate</label>
+                        <input type="radio" name="sort" id="distance" class="sort-input">
+                        <label for="distance">Distance</label>
+                    </div>
+                </div>
+                <div class="search-button">
+                    <a style="color: white; text-decoration: none;" asp-controller="Home" asp-action="PartnerList">Search</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="social-media-footer">
+        <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+        <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+        <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+    </div>
+    <div class="text-footer">
+        © 2022, PT. FRENT.
+    </div>
+</footer>   
+
+<script src="~/JS/navbar.js"></script>
+</html>

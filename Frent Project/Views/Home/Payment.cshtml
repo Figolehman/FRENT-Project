@@ -1,0 +1,261 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="~/CSS/Payment.css" type="text/css">
+    <title>FRENT | Payment</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  </head>
+<body>
+    <nav class="nav pink">
+        <div class="container">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Home">
+                    <img src="~/Media/Logo_Home.png" alt="">
+                </a>
+            </div>
+            <span class="search-bar">
+                <input type="text" placeholder="Search For Partner" name="" id="">
+                <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+            </span>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button" id="nav-profile">
+                        <div>
+                            <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button">
+                        <div class="nav-dropdown">
+                            <img  src="~/Media/Drop.png" alt="">
+                        </div>
+                        <div class="dropped">
+                            <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                            <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                            <a asp-controller="Home" asp-action="Index">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="box-container">
+        <div class="dark-glass">
+            <div class="chat-screen">
+                <div class="close-chat">
+                    <a asp-controller="Home" asp-action="Home">
+                        <img src="~/Media/times.png" alt="">
+                    </a>
+                    
+                </div>
+                <div class="row-input">
+                    <div class="time-input">
+                        <h3>Time</h3>
+                        <div>
+                            <select class="input1" name="" id="hour">
+                                <option value="" disabled selected>Hour</option>
+                                <option value="">0</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                            </select>
+                            <select class="input1" name="" id="minute">
+                                <option value="" disabled selected>Minute</option>
+                                <option value="">0</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="duration-input">
+                        <h3>Duration</h3>
+                        <div>
+                            <select class="input1" name="" id="">
+                                <option value="" disabled selected>Day</option>
+                                <option value="">0</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                            </select>
+                            <select class="input1" name="" id="">
+                                <option value="" disabled selected>Hour</option>
+                                <option value="">0</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="date-input">
+                        <h3>Date</h3>
+                        <div>
+                            <input class="input2" type="date" name="" id="" min="2021-01-01">
+                        </div>
+                    </div>
+                    <div class="location-input">
+                        <h3>Location</h3>
+                        <div>
+                            <input class="input2" type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="payment-input">
+                        <h3>Payment</h3>
+                        <div>
+                            <select class="input2" name="" id="">
+                                <option value="">OVO</option>
+                                <option value="">ShopeePay</option>
+                                <option value="">M-BCA</option>
+                                <option value="">GoPay</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="notes-input">
+                        <h3>Notes</h3>
+                        <div>
+                            <input type="text" class="input2">
+                        </div>
+                    </div>
+                </div>
+                <div class="summary">
+                    Cost: Rp 500.000
+                    <div class="pay-button">
+                        Pay
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blackscreen">
+        <div class="notification-container">
+            <img src="~/Media/PaymentSuccess.png" alt="">
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="social-media-footer">
+        <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+        <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+        <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+    </div>
+    <div class="text-footer">
+        © 2022, PT. FRENT.
+    </div>
+</footer>   
+<script src="~/JS/payment.js"></script>
+<script src="~/JS/navbar.js"></script>
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRENT | Gender</title>
+    <link rel="stylesheet" href="~/css/gender.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Home">
+                    <img src="~/Media/Logo_Home.png" alt="">
+                </a>
+            </div>
+            <span class="search-bar">
+                <input type="text" placeholder="Search For Partner" name="" id="">
+                <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+            </span>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button" id="nav-profile">
+                        <div>
+                            <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button">
+                        <div class="nav-dropdown">
+                            <img  src="~/Media/Drop.png" alt="">
+                        </div>
+                        <div class="dropped">
+                            <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                            <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                            <a asp-controller="Home" asp-action="Index">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+    <div class="container-2">
+      <h2 class="choose" style="margin-top: 100px;">Choose your gender</h2>
+     <div class="row justify-content-center">
+      <div class="col">
+        <img class="fotoPria" src="~/Media/MaleGender.png">
+        <img class="check-select check1" src="~/Media/Checkbox.png" alt="">
+      </div>
+      <div class="col">
+        <img class="fotoWanita" src="~/Media/FemaleGender.png">
+        <img class="check-select check2" src="~/Media/Checkbox.png" alt="">
+      </div>
+      <div>
+        <div>
+          <p class="MaleText" >Male</p>
+        </div>
+        <div>
+          <p class="FemaleText">Female</p>
+        </div>
+     </div>
+      </div>
+        <a type="button" class="btn confirmBtn" style="color: #ffffff; font-size: 30px;">Confirm</a>
+    </div>
+    
+</body>
+<footer>
+  <div class="social-media-footer">
+      <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+      <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+      <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+  </div>
+  <div class="text-footer">
+      © 2022, PT. FRENT.
+  </div>
+</footer>
+<script src="~/js/gender.js"></script>
+<script src="~/js/navbar.js"></script>
+</html>

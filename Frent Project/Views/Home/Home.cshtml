@@ -1,0 +1,151 @@
+﻿
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="~/CSS/Home.css" type="text/css">
+    <title>FRENT | Home</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  </head>
+<body>
+  <div class="nav-container">
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="~/Media/Logo_Home.png" alt="">
+                </a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button" id="nav-profile">
+                        <div>
+                          <a asp-controller="Home" asp-action="Profile"> <img src="~/Media/Profile.png" alt=""></a> 
+                        </div>
+                    </li>
+                    <li class="nav-button">
+                        <div class="nav-dropdown">
+                            <img  src="~/Media/Drop.png" alt="">
+                        </div>
+                        <div class="dropped">
+                            <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                            <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                            <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit">Logout</button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </div>
+
+  <div class="search-box">
+    <h1>Hello !</h1>
+    <h4>What kind of partner do<br>you want?</h4>
+    <div class="search">
+        <input placeholder="Search For Partner" type="search" name="" id="">
+    </div>
+    <a asp-controller="Home" asp-action="PartnerList">
+        <div id="Find-Button">
+            <button>Find</button>
+        </div>
+    </a>
+  </div>
+  <div class="category">
+      <h1>Category</h1>
+      <div class="categories">
+        <div class="category-button">
+            Friends
+          </div>
+          <div class="category-button">
+            Dating
+          </div>
+          <div class="category-button">
+            Online
+          </div>
+          <div class="category-button">
+            Offline
+            <div class="more1"><a style="color: black;" asp-controller="Home" asp-action="AdvanceSearch"><u><b>More</b></u></a></div>
+          </div>
+      </div>
+     
+  </div>
+  <div class="partner">
+    <h1>Partner</h1>
+    <div class="partners">
+        <div class="partner-wrap partner1">
+            <img src="~/Media/Profile.png" alt="">
+            <div class="profile">
+                Name            : Laurel Anderson
+                Gender          : Female
+                Date of Birth : 05/02/1998
+            </div>
+            <div class="chat-partner">
+                <a asp-controller="Home" asp-action="Chat"><img src="~/Media/Chat.png" alt=""></a>
+            </div>
+        </div>
+        <div class="partner-wrap partner2">
+            <img src="~/Media/AnonMale.png" alt="">
+            <div class="profile">
+                Name            : Alexander Russel
+                Gender          : Male
+                Date of Birth : 23/06/1994
+            </div>
+            <div class="chat-partner">
+                <a asp-controller="Home" asp-action="Chat"><img src="~/Media/Chat.png" alt=""></a>
+            </div>
+        </div>
+        <div class="partner-wrap partner3">
+            <img src="~/Media/AnonMale.png" alt="">
+            <div class="profile">
+                Name            : Justin Howe
+                Gender          : Male
+                Date of Birth : 05/02/1998
+            </div>
+            <div class="chat-partner">
+                <a asp-controller="Home" asp-action="Chat"><img src="~/Media/Chat.png" alt=""></a>
+            </div>
+        </div>
+        <div class="partner-wrap partner4">
+            <img src="~/Media/Profile.png" alt="">
+            <div class="profile">
+                Name            : Ruby Moore
+                Gender          : Female
+                Date of Birth : 10/03/1999
+            </div>
+            <div class="chat-partner">
+                <a asp-controller="Home" asp-action="Chat"><img style="margin-left: -50px;" src="~/Media/Chat.png" alt=""></a>
+                <div class="more2"><a style="color: black;" asp-controller="Home" asp-action="PartnerList"><u><b>More</b></u></a></div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="social-media-footer">
+        <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+        <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+        <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+    </div>
+    <div class="text-footer">
+        © 2022, PT. FRENT.
+    </div>
+</footer>   
+<script src="~/JS/navbar-scroll.js"></script>
+<script src="~/JS/navbar.js"></script>
+</html>

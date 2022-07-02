@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRENT | Account</title>
+  <link rel="icon" href="assets/logoOnly.png" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="~/CSS/Settings2.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Home">
+                <img src="~/Media/Logo_Home.png" alt="">
+            </a>
+        </div>
+        <span class="search-bar">
+            <input type="text" placeholder="Search For Partner" name="" id="">
+            <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+        </span>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li>
+                    <div class="nav-button">
+                        <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-button">
+                        <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                    </div>
+                </li>
+                <li class="nav-button" id="nav-profile">
+                    <div>
+                        <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                    </div>
+                </li>
+                <li class="nav-button">
+                    <div class="nav-dropdown">
+                        <img  src="~/Media/Drop.png" alt="">
+                    </div>
+                    <div class="dropped">
+                        <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                        <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                        <a asp-controller="Home" asp-action="Index">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+  <div class="sidebar">
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a class="#" href="#">
+            <span>Settings</span>
+            <hr class="utama">
+          </a>
+        </li>
+        <br>
+        <li>
+          <a asp-controller="Home" asp-action="Privacy">
+            <span>Privacy Policy</span>
+            <hr class="blabla">
+          </a>
+        </li>
+        <br>
+        <li>
+          <a asp-controller="Home" asp-action="Condition">
+            <span class="utama" style="font-size: 26px;">Terms and Conditions of Use</span>
+            <hr class="blabla">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-2">
+    <div class="text">
+      <a style="color: black; text-decoration: none;" asp-controller="Home" asp-action="Activity"><h2>Login Activity</h2></a>
+    </div>
+    <hr class="textt">
+    <div class="col">
+      <div class="text">
+        <h2 style="margin-bottom: -80px;">Two-factor authentication</h2>
+      </div>
+        <a type="button" class="btn">
+          <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+          </label>
+        </a>
+      
+      <hr style="margin-top:30px;" class="textt">
+    </div>
+    <div class="text">
+      <a style="color: black; text-decoration: none;" asp-controller="Home" asp-action="Blocked"><h2>Blocked Account</h2></a>
+    </div>
+    <hr style="margin-bottom: 330px;" class="textt">
+
+  </div>
+
+</body>
+<footer>
+  <div class="social-media-footer">
+      <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+      <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+      <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+  </div>
+  <div class="text-footer">
+      © 2022, PT. FRENT.
+  </div>
+</footer>
+<script src="~/JS/navbar.js"></script>
+</html>

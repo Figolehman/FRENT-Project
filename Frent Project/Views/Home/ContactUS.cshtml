@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FRENT | Contact Us</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/logoOnly.png" />
+   <link rel="stylesheet" href="~/CSS/ContactUs.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Home">
+                <img src="~/Media/Logo_Home.png" alt="">
+            </a>
+        </div>
+        <span class="search-bar">
+            <input type="text" placeholder="Search For Partner" name="" id="">
+            <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+        </span>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li>
+                    <div class="nav-button">
+                        <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-button">
+                        <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                    </div>
+                </li>
+                <li class="nav-button" id="nav-profile">
+                    <div>
+                        <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                    </div>
+                </li>
+                <li class="nav-button">
+                    <div class="nav-dropdown">
+                        <img  src="~/Media/Drop.png" alt="">
+                    </div>
+                    <div class="dropped">
+                        <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                        <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                        <a asp-controller="Home" asp-action="Index">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+  <div class="container text" style="margin-bottom: 80px ;">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title" style="padding-top: 20px">Contact Us</h5>
+            <hr class="style1" style="border-top: 2px solid #ffffff;">
+          </div>
+          <div class="col">
+            <a asp-controller="Home" asp-action="Home">
+              <img style="float: right; margin-right: 40px; margin-top: -45px;" src="~/Media/Group 1.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <form>  
+          <input style="font-size: 22px;" type="text" class="form-control" id="name" name="name" placeholder="Name">
+          <input style="font-size: 22px;" type="email" class="form-control" id="email" name="email" placeholder="Email">
+          <label style="margin-bottom: 20px; margin-top: -15px; font-family: consolas; color: rgb(255, 255, 255); font-size: 13px; float: left"> We'll never
+            share your email
+            with anyone else</label>
+            <div>
+              <textarea style="margin-bottom: 30px; font-size: 22px; resize: none; padding-top: 10px; padding-left: 20px;"  class="form-control-2"  id="message" name="pesan"
+            placeholder="Input your message"></textarea>
+            
+            </div>
+        </form>
+        <div>
+          <a style="margin-left: 285px;" type="button" asp-controller="Home" asp-action="Home" class="btn" style="color: #ffffff;">Send</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<footer>
+  <div class="social-media-footer">
+      <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+      <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+      <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+  </div>
+  <div class="text-footer">
+      © 2022, PT. FRENT.
+  </div>
+</footer>
+<script src="~/JS/navbar.js"></script>
+</html>

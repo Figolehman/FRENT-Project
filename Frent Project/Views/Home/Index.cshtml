@@ -1,0 +1,183 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/CSS/First.css" type="text/css">
+    <title>FRENT</title>
+  </head>
+  
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#">
+                <img src="~/Media/LOGOO.png" alt="">
+            </a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <partial name="_LoginPartial" />
+                @*<li>
+                    <div class="nav-button" id="login-button">
+                        Log In
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-button" id="signup-button">
+                        Sign Up!
+                    </div>
+                </li>*@
+            </ul>
+        </div>
+    </div>
+</nav>
+<body>
+    <div class="blackscreen" id="signup-screen">
+        <div class="signup-form">
+            <div id="CloseForm-SignUp">
+                <img src="~/Media/times.png" alt="">
+            </div>
+            <div id="signup-title">
+                <h1>Sign Up</h1>
+            </div>
+            <div class="input-form">
+                <input type="text" class="input-box" id="FullName-input" placeholder="Full Name">
+                <input type="text" class="input-box" id="Username-input" placeholder="Username">
+                <input type="text" class="input-box" id="NoKTP-input" placeholder="Nomor KTP">
+                <input type="text" class="input-box" id="BirthDate-input" placeholder="Birth Date" onfocus="(this.type = 'date')">
+                <input type="text" class="input-box" id="Email-input" placeholder="Email">
+                <input type="text" class="input-box" id="Password-input" placeholder="Password">
+                <input type="text" class="input-box" id="RePasswrod-input" placeholder="Re-enter Password">
+            </div>
+            <a class="signup-container" asp-controller="Home" asp-action="gender">
+                <button id="Confirm-SignUp">Sign Up</button>
+            </a>
+            <div id="OrContainer">
+                <h1>OR</h1>
+            </div>
+            <a class="continue-with" asp-controller="Home" asp-action="Home">
+                <img id="GoogleIcon" src="~/Media/Google.png" alt="">
+                <div>Continue with Google</div>
+            </a>
+            <a class="continue-with" asp-controller="Home" asp-action="Home">
+                <img id="CallIcon" src="~/Media/Call.png" alt="">
+                <div>Continue with Phone Number</div>
+            </a>
+            <div id="agree-signup">
+                By continuing, you agree to FRENT <b>Terms of Service</b> and <br>
+                acknowledge you've read our <b>Privacy Policy</b>
+            </div>
+        </div>
+    </div>
+    <div class="blackscreen" id="login-screen">
+        <div class="signup-form" style="height: 50%; width: 30%; zoom: 110%;">
+            <div id="CloseForm-LogIn">
+                <img src="~/Media/times.png" alt="">
+            </div>
+            <div id="signup-title">
+                <h1>Log In</h1>
+            </div>
+            <div class="input-form">
+                <input type="text" class="input-box" id="Email-input" placeholder="Email">
+                <input type="text" class="input-box" id="Password-input" placeholder="Password">
+                <div class="input-box" id="ForgetPassword">
+                    <b><u>Forget your password?</u></b>
+                </div>
+            </div>
+            <a asp-controller="Home" asp-action="Home" class="signup-container">
+                <button id="Confirm-SignUp">Log In</button>
+            </a>
+            <div id="OrContainer">
+                <h1>OR</h1>
+            </div>
+            <a class="continue-with" asp-controller="Home" asp-action="Home">
+                <img id="GoogleIcon" src="~/Media/Google.png" alt="">
+                <div>Continue with Google</div>
+            </a>
+            <a class="continue-with" asp-controller="Home" asp-action="Home">
+                <img id="CallIcon" src="~/Media/Call.png" alt="">
+                <div>Continue with Phone Number</div>
+            </a>
+            <div id="agree-signup">
+                <b>Doesn't have account yet? <u>Sign Up!</u></b>
+            </div>
+        </div>
+    </div>
+</body>
+
+<section class="home">
+    <div class="slider">
+        <button class="slider-button left">
+            <img src="~/Media/Left.png" alt="">
+        </button>
+        <div class="slidetrack-container">
+            <ul class="slidetrack">
+                <li class="welcome current-slide">
+                    <div class="welcome-text"><h2>Welcome To</h2>
+                        <h1>FRENT!</h1>
+                        <p>FRENT is a dating app where you can hire someone to be a traveling companion, 
+                        or even a girlfriend or boyfriend with a certain rental time. This application was created 
+                        with the aim of helping people who need friends to travel, want to find a new atmosphere by meeting 
+                        new people, or avoiding questions from relatives such as "When are you getting 
+                        married?", "Why don't you have a girlfriend?" et cetera.</p>
+                        <button class="start-button">Get Started!</button>
+                    </div>
+                    <img class="welcome-logo" src="~/Media/LOGOO.png" alt="">
+                </li>
+                <li class="overlay-slide2">
+                    <div class="founder">
+                        <h1>FRENT'S Founder</h1>
+                    </div>
+                    <div class="founders-list">
+                        <div><img style="border-radius: 40px; width: 200px;
+                            height: 242.09px;" src="~/Media/yopyop.jpg" alt="">Yovita<br>Handayiani</div>
+                        <div><img style="border-radius: 40px; width: 200px;
+                            height: 242.09px;"src="~/Media/figoo.png" alt="">Figo Alessandro<br>Lehman</div>
+                        <div><img style="border-radius: 40px; width: 200px;
+                            height: 242.09px;" src="~/Media/ayung.jpg" alt="">Geraldy<br>Kumara</div>
+                    </div>
+                </li>
+                <li class="overlay-slide3">
+                    <div class="feedback-container">
+                        <img src="~/Media/Profile.png" alt="">
+                        <div class="feedback-text">
+                            So never thought I would say this but I found the love of my life 
+                            on Tinder lol. So so many bad experiences to go through to get to him. 
+                            But honestly, he is worth all that sacrifice. Keep your 
+                            head up folks, you will get there. <br> <br>
+                            <b>Nancy Carol</b>
+                        </div>
+                    </div>
+                    <div class="feedback-container">
+                        <img src="~/Media/AnonMale.png" alt="">
+                        <div class="feedback-text">
+                            FRENT was easy to use, no complaints there. 
+                            It was very easy to get started setting up my profile. 
+                            I would have to say they still need to make improvements on this app. 
+                            Although I wasn't looking for a long term relationship,
+                            it just sort of happened. <br> <br>
+                            <b>Elois Chandler</b>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        <button class="slider-button right">
+            <img src="~/Media/Right.png" alt="">
+        </button>
+        <div class="slider-nav">
+            <button class="slider-indicator current-slide"></button>
+            <button class="slider-indicator"></button>
+            <button class="slider-indicator"></button>
+        </div>
+    </div>
+</section>
+<script src="~/JS/slider.js"></script>
+<script src="~/JS/login-signup-popup.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</html>

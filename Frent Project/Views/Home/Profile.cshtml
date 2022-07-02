@@ -1,0 +1,121 @@
+﻿@using FRENT_Project.Models
+@using Microsoft.AspNetCore.Identity
+@model FRENT_Project.Models.User
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRENT | Profile</title>
+  <link rel="icon" href="assets/logoOnly.png" />
+  <link rel="stylesheet" href="~/CSS/Profile.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Home">
+                <img src="~/Media/Logo_Home.png" alt="">
+            </a>
+        </div>
+        <span class="search-bar">
+            <input type="text" placeholder="Search For Partner" name="" id="">
+            <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+        </span>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li>
+                    <div class="nav-button">
+                        <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-button">
+                        <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                    </div>
+                </li>
+                <li class="nav-button" id="nav-profile">
+                    <div>
+                        <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                    </div>
+                </li>
+                <li class="nav-button">
+                    <div class="nav-dropdown">
+                        <img  src="~/Media/Drop.png" alt="">
+                    </div>
+                    <div class="dropped">
+                        <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                        <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                        <a asp-controller="Home" asp-action="Index">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div class="sidebar">
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a class="#" href="#">
+              <span class="utama">Profile</span>
+              <hr class="utama">
+            </a>
+          </li>
+          <li>
+            <a asp-controller="Home" asp-action="Account">
+              <span>Account</span>
+              <hr class="blabla">
+            </a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-2" style="margin-left: 820px;">
+      <div>
+        <div class="editImage">
+          <img class="fotoProfil" src="~/Media/FemaleGender.png" alt="Foto" />
+          <div class="col">
+            <a style="font-size: 36px; margin-left: 10px;" href="#">Change<img style="margin-left: 8px;" class="edit" src="~/Media/Edit.png" alt=""> </a>
+          </div>
+        </div>
+      </div>
+        <div style="margin-top: 120px;">
+        <form>
+          <label style="font-style: normal; font-weight: 400; font-size: 36px; color: #B3B3B3;">Name</label>
+          <input style="font-size: 18px;" type="text" class="form-control mb-5" id="name" name="name" placeholder="Name" value="@Html.DisplayFor(model => model.fullName)">
+          <label style="font-style: normal; font-weight: 400; font-size: 36px; color: #B3B3B3;">Username</label>
+          <input style="font-size: 18px;"type="text" class="form-control mb-5" id="username" name="username" placeholder="Username" value="@Html.DisplayFor(model => model.UserName)">
+          <label style="font-style: normal; font-weight: 400; font-size: 36px; color: #B3B3B3;">Bio</label>
+          <input style="font-size: 18px;" type="text" class="form-control mb-5" id="bio" name="bio" placeholder="Bio" value="@Html.DisplayFor(model => model.bio)">
+          <label style="font-style: normal; font-weight: 400; font-size: 36px; color: #B3B3B3;">Date of Birth</label>
+          <input style="font-size: 18px;" type="date" class="form-control" id="date" name="date" placeholder="Date of Birth" value="@Html.DisplayFor(model => model.DOB.Day)">
+          <button type="submit" class="btn" style="color: #ffffff; font-size: 30px;">Save</button>
+        </form>
+        
+      </div>
+    </div>
+
+</body>
+<footer>
+  <div class="social-media-footer">
+      <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+      <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+      <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+  </div>
+  <div class="text-footer">
+      © 2022, PT. FRENT.
+  </div>
+</footer>
+<script src="~/JS/navbar.js"></script>
+</html>

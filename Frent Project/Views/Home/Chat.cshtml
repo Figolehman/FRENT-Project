@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="~/CSS/Chat.css" type="text/css">
+    <title>FRENT | Chat</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  </head>
+<body>
+    <nav class="nav pink">
+        <div class="container">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Home">
+                    <img src="~/Media/Logo_Home.png" alt="">
+                </a>
+            </div>
+            <span class="search-bar">
+                <input type="text" placeholder="Search For Partner" name="" id="">
+                <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+            </span>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button" id="nav-profile">
+                        <div>
+                            <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button">
+                        <div class="nav-dropdown">
+                            <img  src="~/Media/Drop.png" alt="">
+                        </div>
+                        <div class="dropped">
+                            <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                            <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                            <a asp-controller="Home" asp-action="Index">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    <div class="box-container">
+        <div class="dark-glass">
+            <div class="chat-screen">
+                <div class="close-chat">
+                    <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/times.png" alt=""></a>
+                </div>
+                <div class="chats">
+                    <img src="~/Media/ChatPartner.png" alt="" class="chatbox chatpart">
+                    <img src="~/Media/ChatPartner.png" alt="" class="chatbox chatpart">
+                    <img src="~/Media/ChatUser.png" alt="" class="chatbox chatuser">
+                </div>
+                <div class="chat-input">
+                    <input type="text" name="" id="" placeholder="Write here...">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="social-media-footer">
+        <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+        <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+        <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+    </div>
+    <div class="text-footer">
+        © 2022, PT. FRENT.
+    </div>
+</footer>   
+
+<script src="~/JS/navbar.js"></script>
+</html>

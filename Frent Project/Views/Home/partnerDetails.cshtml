@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="~/CSS/partnerDetails.css" type="text/css">
+    <title>FRENT | Partner</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <link rel="icon" href="~/assets/Logo_Home.png" />
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Home">
+                    <img src="~/Media/Logo_Home.png" alt="">
+                </a>
+            </div>
+            <span class="search-bar">
+                <input type="text" placeholder="Search For Partner" name="" id="">
+                <a asp-controller="Home" asp-action="PartnerList"><img src="~/Media/Icon_search.png" alt=""></a>
+            </span>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="Order"><img src="~/Media/Buy.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-button">
+                            <a asp-controller="Home" asp-action="ChatList"><img src="~/Media/Chat1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button" id="nav-profile">
+                        <div>
+                            <a asp-controller="Home" asp-action="Profile"><img src="~/Media/Profile.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="nav-button">
+                        <div class="nav-dropdown">
+                            <img  src="~/Media/Drop.png" alt="">
+                        </div>
+                        <div class="dropped">
+                            <a asp-controller="Home" asp-action="Settings2">Setting</a>
+                            <a class="dropped-content2" asp-controller="Home" asp-action="ContactUS">Contact Us</a>
+                            <a asp-controller="Home" asp-action="Index">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-text">
+        <div class="box">
+            <div>
+                <div class="col">
+                    <a type="button" class="btn" href="#">
+                        <img class="left" src="~/Media/ArrowLeft.png" alt="">
+                    </a>
+                    <img class="imagee" src="~/Media/FemaleGender.png" alt="">
+                    <a type="button" class="btn" href="#">
+                        <img class="right" src="~/Media/ArrowRight.png" alt="">
+                    </a>
+                    <div>
+                        <img src="~/Media/Stars.png" alt="" class="stars" id="stars1"></div>
+                        <h2 style="font-size: 24px; margin-left: 80px; margin-top: -5px; margin-bottom: 10px;">Travelling Friend, Offline</h2>
+                    </div>
+                    <span>
+                        <img src="~/Media/Location.svg" alt="" style="margin-left: 140px; margin-top: -10px;">
+                        <h3 style="font-size: 20px; margin-left: 170px; margin-top: -28px;">Jakarta Pusat</h3>
+                    </span>
+                        <h3 style="font-size: 20px; margin-left: 160px; margin-top: -17px;">Rp 450.000</h3>
+                </div>
+        </div>
+        <div class="container-text-2">
+            <h2>Name    : Jesse Field</h2>
+            <h2 style="margin-top: -30px;">Gender  : Female</h2>
+            <h2 style="margin-top: -30px;">Age     : 22</h2>
+            <h2 style="margin-top: -30px;">Bio     : Test!</h2>
+        </div>
+        <div>
+            <div class="col">
+                <a type="button" class="btn" asp-controller="Home" asp-action="Chat">
+                    <img class="chatbg"  src="~/Media/chatttbg.png" alt="">
+                </a>
+                <a type="button" class="btn">
+                    <img class="cal" src="~/Media/calendar.png" alt="">
+                </a>
+                <a type="button" asp-controller="Home" asp-action="Payment" class="btnn" style="color: #ffffff;">Rent</a>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;" class="cal-popup">
+        <img  src="~/Media/calenderr.png" alt="">
+    </div>
+</body>
+<footer>
+    <div class="social-media-footer">
+        <a href="https://www.facebook.com"><img src="~/Media/FB.png" alt=""></a>
+        <a href="https://www.twitter.com"><img src="~/Media/TWITTER.png" alt=""></a>
+        <a href="https://www.instagram.com"><img src="~/Media/IG.png" alt=""></a>
+    </div>
+    <div class="text-footer">
+        © 2022, PT. FRENT.
+    </div>
+</footer>   
+<script src="~/JS/navbar.js"></script>
+<script src="~/JS/calender.js"></script>
+</html>
